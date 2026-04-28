@@ -1,0 +1,16 @@
+.textarea-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background: #fff;
+    resize: vertical;
+    min-height: 110px;
+}
+
+.textarea-field:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.2);
+}

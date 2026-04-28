@@ -1,0 +1,17 @@
+.ui-card {
+    background: var(--cor-fundo-secundario, #fff);
+    border: 1px solid var(--cor-borda, #f0f0f0);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+}
+
+.ui-card-clickable {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ui-card-clickable:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}

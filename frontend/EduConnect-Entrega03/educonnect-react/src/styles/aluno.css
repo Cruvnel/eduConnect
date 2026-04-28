@@ -1,0 +1,1012 @@
+/* estilização home do aluno */
+
+.aluno-home-container {
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.aluno-home-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    background: var(--cor-fundo-secundario);
+    border-right: 1px solid var(--cor-borda);
+    padding: 1.5rem;
+}
+
+.aluno-home-sidebar-header {
+    margin-bottom: 1.5rem;
+}
+
+.aluno-home-sidebar-header h2 {
+    font-size: 20px;
+    margin-bottom: 0.35rem;
+    color: var(--cor-texto-principal);
+}
+
+.aluno-home-sidebar-header p {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.45;
+}
+
+.aluno-home-publicacoes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.aluno-home-publicacao-item {
+    width: 100%;
+    text-align: left;
+    background: var(--cor-fundo-principal);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    padding: 0.95rem 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.aluno-home-publicacao-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--cor-destaque);
+}
+
+.aluno-home-publicacao-item.active {
+    border-left: 4px solid var(--cor-navbar-fundo);
+}
+
+.aluno-home-publicacao-top h3 {
+    font-size: 15px;
+    margin: 0 0 0.35rem 0;
+    color: var(--cor-texto-principal);
+    line-height: 1.35;
+}
+
+.aluno-home-publicacao-date {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+    margin: 0;
+}
+
+.aluno-home-main-content {
+    max-width: none;
+    width: 100%;
+    padding: 2rem;
+}
+
+.aluno-home-page-header {
+    margin-bottom: 2rem;
+}
+
+.aluno-home-page-title {
+    margin-bottom: 0.35rem;
+}
+
+.aluno-home-page-subtitle {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
+.aluno-home-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    gap: 1.25rem;
+    justify-content: start;
+}
+
+.aluno-home-dashboard-grid .dashboard-card {
+    width: 100%;
+    max-width: none;
+    min-height: 138px;
+    padding: 1.6rem 1rem;
+}
+
+.aluno-home-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+/* ícones dos cards */
+
+.calendar-icon svg,
+.evaluations-icon svg,
+.performance-icon svg,
+.frequency-icon svg,
+.bulletin-icon svg {
+    color: #4db8e8;
+}
+
+.occurrences-icon svg {
+    color: #f39c12;
+}
+
+/* modal de comunicado */
+
+.aluno-home-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1200;
+}
+
+.aluno-home-modal {
+    width: 100%;
+    max-width: 720px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 1.25rem;
+}
+
+.aluno-home-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.aluno-home-modal-header h2 {
+    margin: 0 0 0.35rem 0;
+    font-size: 22px;
+    color: var(--cor-texto-principal);
+}
+
+.aluno-home-modal-header p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--cor-texto-secundario);
+}
+
+.aluno-home-modal-close {
+    background: none;
+    border: none;
+    color: var(--cor-texto-secundario);
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.aluno-home-modal-body p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--cor-texto-principal);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* estilização da barra de avisos */
+.aluno-home-publicacoes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 520px;
+    overflow-y: auto;
+    padding-right: 0.35rem;
+}
+
+/* responsividade */
+
+@media (max-width: 1100px) {
+    .aluno-home-dashboard-grid {
+        grid-template-columns: repeat(2, 220px);
+    }
+}
+
+@media (max-width: 768px) {
+    .aluno-home-main-content {
+        padding: 1rem;
+    }
+
+    .aluno-home-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aluno-home-dashboard-grid .dashboard-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* estilização agenda do aluno */
+.aluno-agenda-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.aluno-page-header {
+    margin-bottom: 1.5rem;
+}
+
+.aluno-page-subtitle {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    margin-top: -1rem;
+}
+
+.aluno-form-feedback {
+    margin-bottom: 1rem;
+}
+
+.aluno-agenda-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.8rem;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+.aluno-agenda-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.aluno-calendar-shell {
+    width: 100%;
+}
+
+
+/* estilização página de materiais */
+
+.aluno-materiais-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.aluno-page-header {
+    margin-bottom: 1.5rem;
+}
+
+.aluno-form-feedback {
+    margin-bottom: 1rem;
+}
+
+.aluno-materiais-toolbar-card,
+.aluno-materiais-list-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.8rem;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+.aluno-materiais-filter-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.aluno-materiais-filter-clean {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 1rem;
+}
+
+.aluno-materiais-filter-field {
+    width: 100%;
+    max-width: 360px;
+}
+
+.aluno-materiais-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.aluno-materiais-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.aluno-materiais-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.aluno-materiais-grid::-webkit-scrollbar-track {
+    background: var(--cor-fundo-principal);
+    border-radius: 999px;
+}
+
+.aluno-materiais-grid::-webkit-scrollbar-thumb {
+    background: var(--cor-borda);
+    border-radius: 999px;
+}
+
+.aluno-materiais-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-destaque);
+}
+
+.aluno-material-card {
+    background: var(--cor-fundo-principal);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.aluno-material-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--cor-destaque);
+}
+
+.aluno-material-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.aluno-material-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(44, 90, 160, 0.12);
+    color: #2c5aa0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+.aluno-material-header-text {
+    min-width: 0;
+}
+
+.aluno-material-header-text h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 16px;
+    color: var(--cor-texto-principal);
+    line-height: 1.35;
+}
+
+.aluno-material-disciplina {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 999px;
+    padding: 4px 8px;
+}
+
+.aluno-material-descricao {
+    margin: 0;
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.5;
+}
+
+.aluno-material-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.aluno-material-data {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.aluno-material-download-link {
+    text-decoration: none;
+}
+
+.aluno-material-sem-arquivo {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+body.dark-mode .aluno-material-icon {
+    background: rgba(99, 212, 255, 0.14);
+    color: var(--cor-destaque);
+}
+
+/* estilização pagina de desempenho */
+/* ========= PÁGINA DE DESEMPENHO DO ALUNO ========= */
+
+.aluno-desempenho-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.aluno-page-header {
+    margin-bottom: 2rem;
+}
+
+.aluno-page-title {
+    margin-bottom: 1rem;
+}
+
+.aluno-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.aluno-desempenho-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.aluno-desempenho-summary-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.2rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.aluno-desempenho-summary-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(44, 90, 160, 0.12);
+    color: #2c5aa0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+body.dark-mode .aluno-desempenho-summary-icon {
+    background: rgba(99, 212, 255, 0.14);
+    color: var(--cor-destaque);
+}
+
+.aluno-desempenho-summary-card span {
+    display: block;
+    font-size: 13px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 0.25rem;
+}
+
+.aluno-desempenho-summary-card strong {
+    font-size: 24px;
+    color: var(--cor-texto-principal);
+    line-height: 1;
+}
+
+.aluno-desempenho-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.aluno-desempenho-chart-box {
+    width: 100%;
+    height: 360px;
+    padding-top: 0.5rem;
+}
+
+.aluno-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background: var(--cor-fundo-secundario);
+}
+
+.aluno-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.aluno-table th,
+.aluno-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--cor-borda);
+    color: var(--cor-texto-principal);
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.aluno-table th {
+    font-weight: 600;
+    background: var(--cor-fundo-principal);
+    text-align: left;
+}
+
+.aluno-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.aluno-desempenho-table th:nth-child(2),
+.aluno-desempenho-table td:nth-child(2) {
+    width: 18%;
+    text-align: center;
+}
+
+.aluno-desempenho-table th:nth-child(3),
+.aluno-desempenho-table td:nth-child(3) {
+    width: 28%;
+    text-align: center;
+}
+
+.aluno-grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #2c5aa0;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.aluno-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.aluno-status-badge.is-aprovado {
+    background: #e8f8ef;
+    color: #1f8f4d;
+}
+
+.aluno-status-badge.is-reprovado {
+    background: #fdecec;
+    color: #c0392b;
+}
+
+.aluno-status-badge.is-analise {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.aluno-status-badge.is-recuperacao {
+    background: #fff7e6;
+    color: #b7791f;
+}
+
+@media (max-width: 900px) {
+    .aluno-desempenho-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .aluno-desempenho-page {
+        padding: 1rem;
+    }
+
+    .aluno-desempenho-card {
+        padding: 1rem;
+    }
+
+    .aluno-desempenho-chart-box {
+        height: 300px;
+    }
+}
+
+/* estilização página de frequencia */
+.aluno-frequencia-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.aluno-frequencia-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.aluno-frequencia-summary-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.2rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.aluno-frequencia-summary-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(44, 90, 160, 0.12);
+    color: #2c5aa0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+body.dark-mode .aluno-frequencia-summary-icon {
+    background: rgba(99, 212, 255, 0.14);
+    color: var(--cor-destaque);
+}
+
+.aluno-frequencia-summary-card span {
+    display: block;
+    font-size: 13px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 0.25rem;
+}
+
+.aluno-frequencia-summary-card strong {
+    font-size: 24px;
+    color: var(--cor-texto-principal);
+    line-height: 1;
+}
+
+.aluno-frequencia-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.aluno-frequencia-table th:nth-child(2),
+.aluno-frequencia-table td:nth-child(2),
+.aluno-frequencia-table th:nth-child(3),
+.aluno-frequencia-table td:nth-child(3),
+.aluno-frequencia-table th:nth-child(4),
+.aluno-frequencia-table td:nth-child(4),
+.aluno-frequencia-table th:nth-child(5),
+.aluno-frequencia-table td:nth-child(5) {
+    text-align: center;
+}
+
+.aluno-frequencia-history-table th:nth-child(1),
+.aluno-frequencia-history-table td:nth-child(1) {
+    width: 18%;
+}
+
+.aluno-frequencia-history-table th:nth-child(3),
+.aluno-frequencia-history-table td:nth-child(3) {
+    width: 18%;
+    text-align: center;
+}
+
+.aluno-percentual-badge,
+.aluno-presenca-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.aluno-percentual-badge.is-alta {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.aluno-percentual-badge.is-media {
+    background: #e8f1ff;
+    color: #2c5aa0;
+}
+
+.aluno-percentual-badge.is-baixa {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.aluno-presenca-badge.is-presente {
+    background: #e8f1ff;
+    color: #2c5aa0;
+}
+
+.aluno-presenca-badge.is-ausente {
+    background: #edf4ff;
+    color: #4f86d9;
+}
+
+/* estilização página de boletim */
+.aluno-boletim-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.aluno-boletim-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.aluno-boletim-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+/* remove a linha pequena herdada do form-section-title */
+.aluno-boletim-title {
+    margin: 0;
+    padding: 0;
+    border-bottom: none !important;
+    flex: 1;
+}
+
+.aluno-boletim-title h2 {
+    margin: 0;
+}
+
+.aluno-boletim-header-row .ui-btn {
+    padding: 7px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: auto;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.aluno-boletim-table th:nth-child(1),
+.aluno-boletim-table td:nth-child(1) {
+    width: 22%;
+}
+
+.aluno-boletim-table th:nth-child(2),
+.aluno-boletim-table td:nth-child(2),
+.aluno-boletim-table th:nth-child(3),
+.aluno-boletim-table td:nth-child(3),
+.aluno-boletim-table th:nth-child(4),
+.aluno-boletim-table td:nth-child(4),
+.aluno-boletim-table th:nth-child(5),
+.aluno-boletim-table td:nth-child(5),
+.aluno-boletim-table th:nth-child(6),
+.aluno-boletim-table td:nth-child(6),
+.aluno-boletim-table th:nth-child(7),
+.aluno-boletim-table td:nth-child(7),
+.aluno-boletim-table th:nth-child(8),
+.aluno-boletim-table td:nth-child(8),
+.aluno-boletim-table th:nth-child(9),
+.aluno-boletim-table td:nth-child(9) {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .aluno-boletim-page {
+        padding: 1rem;
+    }
+
+    .aluno-boletim-card {
+        padding: 1rem;
+    }
+
+    .aluno-boletim-header-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .aluno-boletim-header-row .ui-btn {
+        width: 100%;
+    }
+}
+
+/* estilização página de ocorrências */
+.aluno-ocorrencias-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.aluno-ocorrencias-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.aluno-ocorrencias-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aluno-ocorrencia-item {
+    background: var(--cor-fundo-principal);
+    border: 1px solid var(--cor-borda);
+    border-left: 4px solid #f39c12;
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.aluno-ocorrencia-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.aluno-ocorrencia-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.aluno-ocorrencia-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(243, 156, 18, 0.14);
+    color: #f39c12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+.aluno-ocorrencia-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.aluno-ocorrencia-descricao {
+    margin: 0 0 0.75rem 0;
+    color: var(--cor-texto-principal);
+    font-size: 15px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.aluno-ocorrencia-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1rem;
+    font-size: 13px;
+    color: var(--cor-texto-secundario);
+}
+
+.aluno-ocorrencia-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.aluno-ocorrencias-empty {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--cor-texto-secundario);
+    padding: 0.25rem 0;
+}
+
+.aluno-ocorrencias-empty svg {
+    color: #f39c12;
+    flex-shrink: 0;
+}
+
+body.dark-mode .aluno-ocorrencia-icon {
+    background: rgba(243, 156, 18, 0.18);
+    color: #f5b041;
+}
+
+@media (max-width: 768px) {
+    .aluno-ocorrencias-page {
+        padding: 1rem;
+    }
+
+    .aluno-ocorrencias-card {
+        padding: 1rem;
+    }
+
+    .aluno-ocorrencia-top {
+        gap: 0.75rem;
+    }
+
+    .aluno-ocorrencia-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .aluno-frequencia-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .aluno-frequencia-page {
+        padding: 1rem;
+    }
+
+    .aluno-frequencia-card {
+        padding: 1rem;
+    }
+
+    .aluno-frequencia-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .aluno-materiais-toolbar-card,
+    .aluno-materiais-list-card {
+        padding: 1rem;
+    }
+
+    .aluno-materiais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aluno-material-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .aluno-material-download-link .ui-btn {
+        width: 100%;
+    }
+}
+
+
+/* responsividade */
+@media (max-width: 768px) {
+    .aluno-agenda-card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aluno-home-main-content {
+        padding: 1rem;
+    }
+
+    .aluno-home-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}

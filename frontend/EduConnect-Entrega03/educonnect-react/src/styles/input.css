@@ -1,0 +1,55 @@
+.ui-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ui-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+}
+
+.ui-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--cor-input-borda);
+    background-color: var(--cor-input-bg);
+    color: var(--cor-input-texto);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ui-input:focus {
+    outline: none;
+    border-color: var(--cor-input-focus);
+    box-shadow: 0 0 0 2px rgba(77, 184, 232, 0.25);
+}
+
+.ui-input-error {
+    border-color: #ff4d4f;
+}
+
+.ui-input-feedback {
+    font-size: 0.85rem;
+    color: #ff4d4f;
+}
+
+/* estilização para os campos não editáveis */
+.ui-input:disabled,
+.select-field:disabled {
+    background-color: var(--cor-fundo-disabled);
+    color: var(--cor-texto-secundario);
+    border: 1px dashed var(--cor-borda);
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.ui-input:disabled::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+.form-group label.disabled {
+    color: var(--cor-texto-secundario);
+}

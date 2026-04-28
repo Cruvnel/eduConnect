@@ -1,0 +1,49 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.dashboard-card {
+    background-color: var(--cor-fundo-secundario);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+    border: 1px solid var(--cor-borda);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.chart-line svg,
+.graduation-cap svg,
+.closed-folder svg,
+.user-plus svg,
+.user-config svg,
+.upload svg {
+    color: var(--cor-destaque);
+}
+
+.dashboard-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+}
+
+.card-icon svg {
+    color: var(--cor-destaque);
+}

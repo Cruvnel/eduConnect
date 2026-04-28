@@ -1,0 +1,28 @@
+.select-field {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid var(--cor-input-borda);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--cor-input-texto);
+    background-color: var(--cor-input-bg);
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.select-field:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.2);
+}
+
+body.dark-mode .select-field:focus {
+    box-shadow: 0 0 0 2px rgba(99, 212, 255, 0.25);
+}
+
+.select-field:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

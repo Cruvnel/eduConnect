@@ -1,0 +1,83 @@
+.matricula-main {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.matricula-card {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.matricula-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #172b4d;
+}
+
+.matricula-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.matricula-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.matricula-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.matricula-section-title {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+    border-left: 4px solid #00bfff;
+    padding-left: 10px;
+    font-weight: 600;
+    color: #172b4d;
+}
+
+.matricula-section .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.matricula-section .form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.matricula-textarea-group,
+.matricula-actions {
+    grid-column: 1 / -1;
+}
+
+.matricula-actions {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .matricula-card {
+        padding: 30px 20px;
+    }
+
+    .matricula-section {
+        grid-template-columns: 1fr;
+    }
+}

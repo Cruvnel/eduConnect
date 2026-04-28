@@ -1,0 +1,26 @@
+.file-input-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--cor-input-borda);
+    font-size: 0.95rem;
+    background: var(--cor-input-bg);
+    color: var(--cor-input-texto);
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.file-input-field:focus {
+    outline: none;
+    border-color: var(--cor-input-focus);
+    box-shadow: 0 0 0 2px rgba(77, 184, 232, 0.25);
+}
+
+body.dark-mode .file-input-field:focus {
+    box-shadow: 0 0 0 2px rgba(99, 212, 255, 0.25);
+}
+
+.file-input-helper {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+}

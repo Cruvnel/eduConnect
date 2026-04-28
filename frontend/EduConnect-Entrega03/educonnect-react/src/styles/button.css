@@ -1,0 +1,42 @@
+.ui-btn {
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s, opacity 0.2s, color 0.2s;
+}
+
+.ui-btn-primary {
+    background-color: var(--cor-navbar-fundo);
+    color: var(--cor-fundo-secundario);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.ui-btn-primary:hover {
+    opacity: 0.9;
+}
+
+.ui-btn-full {
+    width: 100%;
+}
+
+.ui-btn-md {
+    font-size: 15px;
+}
+
+.auth-form .ui-btn,
+.modal-container .ui-btn {
+    margin-top: 1rem;
+}
+
+.ui-btn-secondary {
+    background-color: #e0e0e0;
+    color: #666;
+    border: none;
+}
+
+.ui-btn-secondary:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,1471 @@
+.teacher-main-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+}
+
+.teacher-main-content {
+    flex: 1;
+    width: 100%;
+    max-width: 768px;
+    padding: 2rem;
+}
+
+.teacher-page-header {
+    margin-bottom: 2rem;
+}
+
+.teacher-page-subtitle {
+    margin-top: -1rem;
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+.teacher-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.teacher-dashboard-grid .dashboard-card {
+    min-height: 180px;
+}
+
+.teacher-dashboard-grid .card-icon,
+.teacher-dashboard-grid .dashboard-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.teacher-dashboard-grid .calendar-icon,
+.teacher-dashboard-grid .evaluations-icon,
+.teacher-dashboard-grid .performance-icon,
+.teacher-dashboard-grid .frequency-icon,
+.teacher-dashboard-grid .bulletin-icon {
+    color: #4db8e8;
+}
+
+/* Home do professor */
+
+.frequency-icon svg,
+.evaluations-icon svg,
+.calendar-icon svg,
+.performance-icon svg,
+.bulletin-icon svg {
+    color: #4db8e8;
+}
+
+.occurrences-icon svg {
+    color: #f39c12;
+}
+
+.occurrences-icon {
+    color: #f39c12;
+}
+
+.teacher-dashboard-grid .occurrences-icon {
+    color: #f39c12;
+}
+
+/* ========= AGENDA PROFESSOR ========= */
+
+.professor-agenda-page {
+    max-width: 1100px;
+}
+
+.professor-page-header {
+    margin-bottom: 1.5rem;
+}
+
+.professor-page-subtitle {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    margin-top: -1rem;
+}
+
+.professor-form-feedback {
+    margin-bottom: 1rem;
+}
+
+.professor-agenda-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.8rem;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+.professor-agenda-calendar-card {
+    margin-bottom: 1.5rem;
+}
+
+.professor-agenda-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.professor-calendar-shell {
+    width: 100%;
+}
+
+/* barra acima da listagem */
+.professor-agenda-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.professor-agenda-filter {
+    min-width: 320px;
+    max-width: 420px;
+    width: 100%;
+}
+
+.professor-agenda-current-class {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background: var(--cor-fundo-principal);
+    min-width: 220px;
+}
+
+.professor-agenda-current-class span {
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+}
+
+.professor-agenda-current-class small {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+}
+
+/* tabela */
+.professor-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background-color: var(--cor-fundo-secundario);
+}
+
+.professor-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.professor-table th,
+.professor-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-borda);
+    color: var(--cor-texto-principal);
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.professor-table th {
+    font-weight: 600;
+    background-color: var(--cor-fundo-principal);
+}
+
+.professor-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.professor-table-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* botão flutuante laranja */
+.professor-agenda-add-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #ff9800;
+    color: #ffffff;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 999;
+}
+
+.professor-agenda-add-btn:hover {
+    background: #e68900;
+    transform: scale(1.08);
+}
+
+/* modal */
+.professor-agenda-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1100;
+}
+
+.professor-agenda-modal {
+    width: 100%;
+    max-width: 520px;
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+}
+
+.professor-agenda-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.professor-agenda-modal-header h2 {
+    margin: 0;
+    color: var(--cor-texto-principal);
+    font-size: 22px;
+}
+
+.professor-agenda-modal-close {
+    background: none;
+    border: none;
+    color: var(--cor-texto-secundario);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.professor-agenda-modal-actions {
+    justify-content: flex-end;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+    .agenda-calendario-grid {
+        grid-auto-rows: 90px;
+    }
+
+    .agenda-calendario-day {
+        min-height: 90px;
+        padding: 5px;
+    }
+
+    .agenda-calendario-weekday {
+        font-size: 12px;
+        padding: 0.4rem 0.15rem;
+    }
+
+    .agenda-calendario-title {
+        font-size: 18px;
+    }
+
+    .agenda-calendario-event-indicator {
+        font-size: 11px;
+    }
+}
+
+
+/* estilização página de frequência */
+
+.professor-frequencia-page {
+    max-width: 1150px;
+}
+
+.professor-frequencia-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.8rem;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+.professor-frequencia-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.professor-frequencia-toolbar {
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) 220px auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.professor-frequencia-filter,
+.professor-frequencia-date {
+    min-width: 0;
+}
+
+.professor-frequencia-toolbar-action {
+    display: flex;
+    align-items: end;
+}
+
+.professor-frequencia-toolbar-action .ui-btn {
+    height: 42px;
+}
+
+.professor-frequencia-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.professor-frequencia-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background: var(--cor-fundo-principal);
+}
+
+.professor-frequencia-info-label {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.professor-frequencia-alert {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid;
+}
+
+.professor-frequencia-alert-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.professor-frequencia-alert p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.professor-frequencia-alert-info {
+    background: #e7f1ff;
+    border-color: #9ec5fe;
+    color: #1f4f99;
+}
+
+.professor-frequencia-alert-edit {
+    background: #fff8e1;
+    border-color: #d6b656;
+    color: #7a6420;
+}
+
+body.dark-mode .professor-frequencia-alert-info {
+    background: rgba(44, 90, 160, 0.18);
+    border-color: rgba(99, 212, 255, 0.22);
+    color: var(--cor-texto-principal);
+}
+
+body.dark-mode .professor-frequencia-alert-edit {
+    background: rgba(255, 152, 0, 0.12);
+    border-color: rgba(255, 152, 0, 0.25);
+    color: var(--cor-texto-principal);
+}
+
+.professor-frequencia-table th:nth-child(1),
+.professor-frequencia-table td:nth-child(1) {
+    width: 10%;
+}
+
+.professor-frequencia-table th:nth-child(2),
+.professor-frequencia-table td:nth-child(2) {
+    width: 26%;
+}
+
+.professor-frequencia-table th:nth-child(3),
+.professor-frequencia-table td:nth-child(3) {
+    width: 14%;
+}
+
+.professor-frequencia-table th:nth-child(4),
+.professor-frequencia-table td:nth-child(4) {
+    width: 12%;
+}
+
+.professor-frequencia-table th:nth-child(5),
+.professor-frequencia-table td:nth-child(5) {
+    width: 14%;
+}
+
+.professor-frequencia-table th:nth-child(6),
+.professor-frequencia-table td:nth-child(6) {
+    width: 24%;
+}
+
+.professor-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.professor-status-badge.ativo {
+    background: #e3f7ed;
+    color: #1f7a4e;
+}
+
+.professor-status-badge.inativo {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.professor-frequencia-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 14px;
+    color: var(--cor-texto-principal);
+}
+
+.professor-frequencia-checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.professor-frequencia-note {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--cor-input-borda);
+    background: var(--cor-input-bg);
+    color: var(--cor-input-texto);
+    font-size: 14px;
+}
+
+.professor-frequencia-actions {
+    margin-top: 1.5rem;
+}
+
+/* estilização da página de materiais */
+
+.professor-materiais-page {
+    max-width: 1150px;
+}
+
+.professor-materiais-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    padding: 1.8rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.professor-materiais-grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.professor-materiais-form-column {
+    padding-right: 1.5rem;
+    border-right: 3px solid var(--cor-destaque);
+}
+
+.professor-materiais-list-column {
+    padding-left: 0.5rem;
+}
+
+.professor-materiais-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.professor-materiais-info-box {
+    margin: 0.25rem 0 1rem;
+    padding: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background: var(--cor-fundo-principal);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.professor-materiais-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.professor-materiais-info-label {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.professor-materiais-file-input {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    background-color: var(--cor-input-bg);
+    color: var(--cor-input-texto);
+    border: 1px solid var(--cor-input-borda);
+    border-radius: var(--radius-sm);
+}
+
+.professor-materiais-file-hint {
+    display: inline-block;
+    margin-top: 0.45rem;
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.professor-materiais-form-actions {
+    justify-content: flex-start;
+}
+
+.professor-materiais-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    max-height: 520px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.professor-materiais-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.professor-materiais-list::-webkit-scrollbar-track {
+    background: var(--cor-fundo-principal);
+    border-radius: 999px;
+}
+
+.professor-materiais-list::-webkit-scrollbar-thumb {
+    background: var(--cor-borda);
+    border-radius: 999px;
+}
+
+.professor-materiais-list::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-destaque);
+}
+
+.professor-material-card {
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 1rem;
+    background: var(--cor-fundo-principal);
+    animation: aparecer 0.25s ease;
+}
+
+.professor-material-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.professor-material-card-title-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.professor-material-card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(44, 90, 160, 0.12);
+    color: #4db8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.professor-material-card-title-area h3 {
+    font-size: 16px;
+    margin-bottom: 0.35rem;
+    color: var(--cor-texto-principal);
+}
+
+.professor-material-card-description {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.professor-material-card-actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.professor-material-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid #cfe4ff;
+    background: #eef6ff;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.professor-material-link:hover {
+    background: #e3f0ff;
+    border-color: #b7d4ff;
+}
+
+.professor-material-date {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+body.dark-mode .professor-material-card-icon {
+    background: rgba(99, 212, 255, 0.14);
+    color: #63d4ff;
+}
+
+body.dark-mode .professor-material-link {
+    background: rgba(44, 90, 160, 0.18);
+    border-color: rgba(99, 212, 255, 0.18);
+    color: #8ab4ff;
+}
+
+/* estilização pagina de notas */
+.professor-notas-page-v2 {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.professor-notas-top-card,
+.professor-notas-form-card,
+.professor-notas-table-card,
+.professor-notas-history-card {
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.professor-notas-top-card,
+.professor-notas-history-card {
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.professor-notas-main-grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.professor-notas-form-card,
+.professor-notas-table-card {
+    padding: 1.6rem 1.8rem;
+}
+
+.professor-notas-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.professor-notas-top-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, 420px) 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.professor-notas-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.85rem;
+}
+
+.professor-notas-summary-item {
+    padding: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background: var(--cor-fundo-principal);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.professor-notas-summary-item span {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.professor-notas-summary-item strong {
+    color: var(--cor-texto-principal);
+    font-size: 15px;
+}
+
+.professor-notas-empty-panel {
+    padding: 1rem;
+    border: 1px dashed var(--cor-borda);
+    border-radius: 8px;
+    background: var(--cor-fundo-principal);
+    color: var(--cor-texto-secundario);
+}
+
+.professor-notas-alert {
+    margin-bottom: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1px solid;
+}
+
+.professor-notas-alert-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 0.45rem;
+}
+
+.professor-notas-alert p {
+    margin: 0;
+    line-height: 1.45;
+}
+
+.professor-notas-alert-info {
+    border-color: #9ec5fe;
+    background-color: #e7f1ff;
+    color: #1f4f99;
+}
+
+.professor-notas-alert-edit {
+    border-color: #d6b656;
+    background-color: #fff8e1;
+    color: #7a6420;
+}
+
+body.dark-mode .professor-notas-alert-info {
+    background: rgba(44, 90, 160, 0.18);
+    border-color: rgba(99, 212, 255, 0.22);
+    color: var(--cor-texto-principal);
+}
+
+body.dark-mode .professor-notas-alert-edit {
+    background: rgba(255, 152, 0, 0.12);
+    border-color: rgba(255, 152, 0, 0.25);
+    color: var(--cor-texto-principal);
+}
+
+.professor-notas-v2-form {
+    max-width: 100%;
+}
+
+.professor-notas-v2-row {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: 1rem;
+    align-items: start;
+}
+
+.professor-notas-v2-row>.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.professor-notas-v2-row>.form-group label {
+    height: 20px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.professor-notas-v2-row .select-field,
+.professor-notas-v2-row input[type="number"],
+.professor-notas-v2-row input[type="text"] {
+    height: 42px;
+    min-height: 42px;
+}
+
+.professor-notas-v2-actions {
+    justify-content: flex-start;
+}
+
+.professor-notas-student-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.professor-notas-student-cell strong {
+    color: var(--cor-texto-principal);
+}
+
+.professor-notas-student-cell span {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.professor-notas-v2-table th:nth-child(1),
+.professor-notas-v2-table td:nth-child(1) {
+    width: 28%;
+}
+
+.professor-notas-v2-table th:nth-child(2),
+.professor-notas-v2-table td:nth-child(2),
+.professor-notas-v2-table th:nth-child(3),
+.professor-notas-v2-table td:nth-child(3),
+.professor-notas-v2-table th:nth-child(4),
+.professor-notas-v2-table td:nth-child(4),
+.professor-notas-v2-table th:nth-child(5),
+.professor-notas-v2-table td:nth-child(5),
+.professor-notas-v2-table th:nth-child(6),
+.professor-notas-v2-table td:nth-child(6) {
+    width: 7%;
+    text-align: center;
+}
+
+.professor-notas-v2-table th:nth-child(7),
+.professor-notas-v2-table td:nth-child(7) {
+    width: 12%;
+    text-align: center;
+}
+
+.professor-notas-v2-table th:nth-child(8),
+.professor-notas-v2-table td:nth-child(8) {
+    width: 16%;
+}
+
+.professor-notas-history-list-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.professor-notas-history-item-v2 {
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 1rem;
+    background: var(--cor-fundo-principal);
+}
+
+.professor-notas-history-top {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto-principal);
+}
+
+.professor-notas-history-date-v2 {
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+}
+
+.professor-notas-history-item-v2 p {
+    margin: 0;
+    color: var(--cor-texto-principal);
+    line-height: 1.45;
+}
+
+/* estilização da página de ocorrencias */
+.professor-ocorrencias-page {
+    width: 95%;
+    max-width: 860px;
+    margin: 0 auto;
+    display: block;
+}
+
+.professor-ocorrencias-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.professor-ocorrencias-form {
+    max-width: 100%;
+}
+
+.professor-ocorrencias-actions {
+    justify-content: flex-start;
+}
+
+.professor-ocorrencias-table th:nth-child(1),
+.professor-ocorrencias-table td:nth-child(1) {
+    width: 22%;
+}
+
+.professor-ocorrencias-table th:nth-child(2),
+.professor-ocorrencias-table td:nth-child(2) {
+    width: 46%;
+}
+
+.professor-ocorrencias-table th:nth-child(3),
+.professor-ocorrencias-table td:nth-child(3) {
+    width: 16%;
+}
+
+.professor-ocorrencias-table th:nth-child(4),
+.professor-ocorrencias-table td:nth-child(4) {
+    width: 16%;
+}
+
+.professor-ocorrencias-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+    margin-top: 0.75rem;
+}
+
+.professor-ocorrencias-summary-item {
+    padding: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background: var(--cor-fundo-principal);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.professor-ocorrencias-summary-item span {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.professor-ocorrencias-summary-item strong {
+    color: var(--cor-texto-principal);
+    font-size: 15px;
+}
+
+/* estilização da página de turmas do professor */
+
+.professor-turmas-main-content {
+    max-width: 1100px;
+}
+
+.professor-turmas-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.professor-turmas-page-title {
+    margin-bottom: 0.35rem;
+}
+
+.professor-turmas-page-subtitle {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+}
+
+.professor-turmas-page-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.professor-turmas-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.professor-turmas-section {
+    margin-bottom: 3rem;
+}
+
+.professor-turmas-section-title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    color: var(--cor-texto-principal);
+}
+
+.professor-turmas-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.professor-turma-card {
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.professor-turma-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.professor-turma-card h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: var(--cor-texto-principal);
+}
+
+.professor-turma-card p {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 0.75rem;
+}
+
+.professor-turma-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1rem;
+}
+
+.professor-turma-card-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* estilização da página de detalhes da turma do professor */
+
+.professor-turma-detalhe-page {
+    max-width: 900px;
+}
+
+.professor-turma-detalhe-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.professor-turma-detalhe-page-title {
+    margin-bottom: 0.35rem;
+}
+
+.professor-turma-detalhe-page-subtitle {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+}
+
+.professor-turma-detalhe-top-actions {
+    margin-top: 1rem;
+}
+
+.professor-turma-detalhe-card {
+    background: var(--cor-fundo-secundario);
+    border-radius: var(--radius-lg);
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--cor-borda);
+}
+
+.professor-turma-detalhe-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+}
+
+.professor-turma-detalhe-info-item {
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-fundo-principal);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+.professor-turma-detalhe-info-item-full {
+    grid-column: 1 / -1;
+}
+
+.professor-turma-detalhe-info-label {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.professor-turma-detalhe-inline-icon {
+    color: var(--cor-navbar-fundo);
+    flex-shrink: 0;
+}
+
+.professor-turma-detalhe-info-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+}
+
+.professor-turma-detalhe-feedback {
+    color: var(--cor-texto-secundario);
+}
+
+.professor-turma-detalhe-table th:nth-child(1),
+.professor-turma-detalhe-table td:nth-child(1) {
+    width: 14%;
+}
+
+.professor-turma-detalhe-table th:nth-child(2),
+.professor-turma-detalhe-table td:nth-child(2) {
+    width: 42%;
+}
+
+.professor-turma-detalhe-table th:nth-child(3),
+.professor-turma-detalhe-table td:nth-child(3) {
+    width: 24%;
+}
+
+.professor-turma-detalhe-table th:nth-child(4),
+.professor-turma-detalhe-table td:nth-child(4) {
+    width: 20%;
+}
+
+.professor-turma-detalhe-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.professor-turma-detalhe-status-active {
+    background: #e3f7ed;
+    color: #1f7a4e;
+}
+
+.professor-turma-detalhe-status-inactive {
+    background: #fdecea;
+    color: #b42318;
+}
+
+@media (max-width: 768px) {
+    .professor-turma-detalhe-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .professor-turma-detalhe-page-header .ui-btn {
+        width: 100%;
+    }
+
+    .professor-turma-detalhe-card {
+        padding: 1rem;
+    }
+
+    .professor-turma-detalhe-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-turma-detalhe-info-item-full {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-turmas-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .professor-turmas-page-actions {
+        width: 100%;
+    }
+
+    .professor-turmas-page-actions .ui-btn {
+        width: 100%;
+    }
+
+    .professor-turmas-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .professor-turmas-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-turmas-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-ocorrencias-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1100px) {
+    .professor-ocorrencias-page {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-ocorrencias-actions {
+        flex-direction: column;
+    }
+
+    .professor-ocorrencias-actions .ui-btn {
+        width: 100%;
+    }
+
+    .professor-ocorrencias-table td:last-child .ui-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .professor-notas-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-notas-top-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-notas-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-notas-page-v2 {
+        padding: 1rem;
+    }
+
+    .professor-notas-top-card,
+    .professor-notas-form-card,
+    .professor-notas-table-card,
+    .professor-notas-history-card {
+        padding: 1rem;
+    }
+
+    .professor-notas-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-notas-v2-row {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-notas-v2-actions {
+        flex-direction: column-reverse;
+    }
+
+    .professor-notas-v2-actions .ui-btn {
+        width: 100%;
+    }
+
+    .professor-notas-history-top {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .professor-materiais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-materiais-form-column {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 3px solid var(--cor-destaque);
+        padding-bottom: 1.5rem;
+    }
+
+    .professor-materiais-list-column {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-materiais-card {
+        padding: 1rem;
+    }
+
+    .professor-material-card-header {
+        flex-direction: column;
+    }
+
+    .professor-material-card-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .professor-material-card-actions .ui-btn,
+    .professor-material-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .professor-materiais-form-actions .ui-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .professor-frequencia-toolbar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .professor-frequencia-toolbar-action {
+        grid-column: 1 / -1;
+    }
+
+    .professor-frequencia-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-frequencia-card {
+        padding: 1rem;
+    }
+
+    .professor-frequencia-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-frequencia-toolbar-action .ui-btn {
+        width: 100%;
+    }
+
+    .professor-frequencia-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-frequencia-actions {
+        flex-direction: column-reverse;
+    }
+
+    .professor-frequencia-actions .ui-btn {
+        width: 100%;
+    }
+
+    .professor-frequencia-checkbox {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .professor-agenda-card {
+        padding: 1rem;
+    }
+
+    .professor-agenda-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .professor-agenda-filter {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .professor-table-actions {
+        flex-direction: column;
+    }
+
+    .professor-table-actions .ui-btn {
+        width: 100%;
+    }
+
+    .professor-agenda-modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .professor-agenda-modal-actions .ui-btn {
+        width: 100%;
+    }
+
+    .professor-agenda-add-btn {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .teacher-dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .teacher-main-content {
+        padding: 1rem;
+    }
+
+    .teacher-dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .teacher-page-subtitle {
+        margin-top: -0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .teacher-main-content {
+        padding: 1rem 0.75rem;
+    }
+
+    .teacher-dashboard-grid .dashboard-card {
+        min-height: 150px;
+    }
+}
