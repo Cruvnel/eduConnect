@@ -1,0 +1,29 @@
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Arquivos de ambiente
+.env
+
+# Ignorar configs sensíveis
+appsettings.json
+appsettings.*.json
+
+# não ignorar o arquivo de exemplo
+!appsettings.Example.json
+
+# Uploads
+wwwroot/uploads/
+wwwroot/uploads/**
+
+# Node
+node_modules/
+dist/
